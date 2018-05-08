@@ -6,12 +6,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ButtonGroup;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Pergunta3 extends JFrame {
 
@@ -75,8 +79,25 @@ public class Pergunta3 extends JFrame {
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("9");
 		
 		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("6");
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(rdbtnNewRadioButton);
+		bg.add(rdbtnNewRadioButton_1);
+		bg.add(rdbtnNewRadioButton_2);
+		bg.add(rdbtnNewRadioButton_3);
 		
 		JButton btnConfirmar = new JButton("Confirmar");
+		btnConfirmar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnNewRadioButton.isSelected()){
+					JOptionPane.showMessageDialog(null,"Acertou!!");
+				}else{
+					JOptionPane.showMessageDialog(null, "Errou!!");
+				}
+				Perguntas4 p4 = new Perguntas4();
+				p4.setVisible(true);
+				dispose();
+			}
+		});
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)

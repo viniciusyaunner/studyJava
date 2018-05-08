@@ -6,11 +6,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ButtonGroup;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class pergunta11 extends JFrame {
 
@@ -77,6 +82,26 @@ public class pergunta11 extends JFrame {
 		JRadioButton rdbtnQuinto = new JRadioButton("Quinto");
 		
 		JRadioButton rdbtnSegundo = new JRadioButton("Segundo");
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(rdbtnPrimeiro);
+		bg.add(rdbtnQuarto);
+		bg.add(rdbtnTerceiro);
+		bg.add(rdbtnQuinto);
+		bg.add(rdbtnSegundo);
+		
+		JButton btnNewButton = new JButton("Confirmar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnSegundo.isSelected()){
+					JOptionPane.showMessageDialog(null,"Acertou!!");
+				}else{
+					JOptionPane.showMessageDialog(null, "Errou!!");
+				}
+				pergunta12 p12 = new pergunta12();
+				p12.setVisible(true);
+				dispose();
+			}
+		});
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
@@ -88,7 +113,11 @@ public class pergunta11 extends JFrame {
 						.addComponent(rdbtnTerceiro)
 						.addComponent(rdbtnQuarto)
 						.addComponent(rdbtnPrimeiro))
-					.addContainerGap(72, Short.MAX_VALUE))
+					.addContainerGap(114, Short.MAX_VALUE))
+				.addGroup(Alignment.TRAILING, gl_panel.createSequentialGroup()
+					.addContainerGap(67, Short.MAX_VALUE)
+					.addComponent(btnNewButton)
+					.addGap(60))
 		);
 		gl_panel.setVerticalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
@@ -103,7 +132,9 @@ public class pergunta11 extends JFrame {
 					.addComponent(rdbtnQuinto)
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(rdbtnSegundo)
-					.addContainerGap(80, Short.MAX_VALUE))
+					.addPreferredGap(ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+					.addComponent(btnNewButton)
+					.addGap(25))
 		);
 		panel.setLayout(gl_panel);
 		contentPane.setLayout(gl_contentPane);

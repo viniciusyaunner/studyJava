@@ -6,12 +6,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ButtonGroup;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Pergunta2 extends JFrame {
 
@@ -76,23 +80,38 @@ public class Pergunta2 extends JFrame {
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Pai");
 		
 		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("Tio");
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(rdbtnNewRadioButton);
+		bg.add(rdbtnNewRadioButton_1);
+		bg.add(rdbtnNewRadioButton_2);
+		bg.add(rdbtnNewRadioButton_3);
+		
 		
 		JButton btnNewButton = new JButton("Comfirmar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnNewRadioButton_3.isSelected()){
+					JOptionPane.showMessageDialog(null,"Acertou!!");
+				}else{
+					JOptionPane.showMessageDialog(null, "Errou!!");
+				}
+				Pergunta3 p3 = new Pergunta3();
+				p3.setVisible(true);
+				dispose();
+			}
+		});
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
-			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel.createSequentialGroup()
+			gl_panel.createParallelGroup(Alignment.TRAILING)
+				.addGroup(Alignment.LEADING, gl_panel.createSequentialGroup()
 					.addGap(35)
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+						.addComponent(btnNewButton)
 						.addComponent(rdbtnNewRadioButton_3)
 						.addComponent(rdbtnNewRadioButton_2)
 						.addComponent(rdbtnNewRadioButton_1)
 						.addComponent(rdbtnNewRadioButton))
-					.addContainerGap(42, Short.MAX_VALUE))
-				.addGroup(Alignment.TRAILING, gl_panel.createSequentialGroup()
-					.addContainerGap(57, Short.MAX_VALUE)
-					.addComponent(btnNewButton)
-					.addGap(48))
+					.addContainerGap(70, Short.MAX_VALUE))
 		);
 		gl_panel.setVerticalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
@@ -112,5 +131,4 @@ public class Pergunta2 extends JFrame {
 		panel.setLayout(gl_panel);
 		contentPane.setLayout(gl_contentPane);
 	}
-
 }

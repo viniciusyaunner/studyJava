@@ -6,11 +6,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ButtonGroup;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Pergunta8 extends JFrame {
 
@@ -49,18 +54,22 @@ public class Pergunta8 extends JFrame {
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(75)
-					.addComponent(lblSimpatiaEstPara))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(63)
-					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(75)
+							.addComponent(lblSimpatiaEstPara))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(63)
+							.addComponent(panel, GroupLayout.PREFERRED_SIZE, 193, GroupLayout.PREFERRED_SIZE)))
+					.addContainerGap(67, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addComponent(lblSimpatiaEstPara)
 					.addGap(38)
-					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 188, GroupLayout.PREFERRED_SIZE))
+					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 188, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap())
 		);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Erro");
@@ -70,6 +79,28 @@ public class Pergunta8 extends JFrame {
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Certeiro");
 		
 		JRadioButton rdbtnCorreto = new JRadioButton("Correto");
+		
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(rdbtnNewRadioButton);
+		bg.add(rdbtnErrado);
+		bg.add(rdbtnNewRadioButton_1);
+		bg.add(rdbtnCorreto);
+		
+		JButton btnConfirmar = new JButton("Confirmar");
+
+	
+		btnConfirmar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtnErrado.isSelected()){
+					JOptionPane.showMessageDialog(null,"Acertou!!");
+				}else{
+					JOptionPane.showMessageDialog(null, "Errou!!");
+				}
+				Pergunta9 p9 = new Pergunta9();
+				p9.setVisible(true);
+				dispose();
+			}
+		});
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
@@ -78,9 +109,12 @@ public class Pergunta8 extends JFrame {
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 						.addComponent(rdbtnNewRadioButton)
 						.addComponent(rdbtnErrado)
-						.addComponent(rdbtnNewRadioButton_1)
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(rdbtnNewRadioButton_1)
+							.addPreferredGap(ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+							.addComponent(btnConfirmar))
 						.addComponent(rdbtnCorreto))
-					.addContainerGap(75, Short.MAX_VALUE))
+					.addContainerGap())
 		);
 		gl_panel.setVerticalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
@@ -94,6 +128,10 @@ public class Pergunta8 extends JFrame {
 					.addGap(18)
 					.addComponent(rdbtnCorreto)
 					.addContainerGap(18, Short.MAX_VALUE))
+				.addGroup(Alignment.TRAILING, gl_panel.createSequentialGroup()
+					.addContainerGap(94, Short.MAX_VALUE)
+					.addComponent(btnConfirmar)
+					.addGap(71))
 		);
 		panel.setLayout(gl_panel);
 		contentPane.setLayout(gl_contentPane);

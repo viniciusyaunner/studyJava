@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import javafx.application.Application;
+
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
@@ -52,9 +55,21 @@ public class Inicio extends JFrame {
 		lblPerguntasDeRaciocinio.setFont(new Font("OCR A Extended", Font.PLAIN, 16));
 		
 		JButton btnSair = new JButton("Sair");
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				System.exit(0);
+			}
+		});
 		btnSair.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JButton btnAvanar = new JButton("Avan\u00E7ar");
+		btnAvanar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				pergunta1 p1 = new pergunta1();
+				p1.setVisible(true);
+				dispose();
+			}
+		});
 		btnAvanar.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(

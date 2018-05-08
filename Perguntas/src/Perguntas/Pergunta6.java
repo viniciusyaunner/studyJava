@@ -7,9 +7,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ButtonGroup;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
@@ -75,10 +77,23 @@ public class Pergunta6 extends JFrame {
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("12,5 quilos");
 		
 		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("15,5 quilos");
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(rdbtnNewRadioButton);
+		bg.add(rdbtnNewRadioButton_1);
+		bg.add(rdbtnNewRadioButton_2);
+		bg.add(rdbtnNewRadioButton_3);
 		
 		JButton btnNewButton = new JButton("Confirmar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(rdbtnNewRadioButton.isSelected()){
+					JOptionPane.showMessageDialog(null,"Acertou!!");
+				}else{
+					JOptionPane.showMessageDialog(null, "Errou!!");
+				}
+				Pergunta7 p7 = new Pergunta7();
+				p7.setVisible(true);
+				dispose();
 			}
 		});
 		GroupLayout gl_panel = new GroupLayout(panel);
