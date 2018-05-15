@@ -17,6 +17,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
 
 public class Pergunta6 extends JFrame {
 
@@ -45,12 +47,17 @@ public class Pergunta6 extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 831, 416);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(102, 51, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		JLabel lblVocTemDuas = new JLabel("6.Voc\u00EA tem duas malas, sendo que a maior possui o dobro da capacidade da outra e armazena 25 quilos.Juntando as duas, quantos quilos voc\u00EA pode levar nas malas? ");
+		lblVocTemDuas.setForeground(new Color(255, 255, 255));
+		lblVocTemDuas.setBackground(new Color(102, 51, 102));
+		lblVocTemDuas.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(102, 51, 102));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -71,12 +78,24 @@ public class Pergunta6 extends JFrame {
 		);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("37,5 quilos");
+		rdbtnNewRadioButton.setForeground(new Color(255, 255, 255));
+		rdbtnNewRadioButton.setBackground(new Color(102, 51, 102));
+		rdbtnNewRadioButton.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("50 quilos");
+		rdbtnNewRadioButton_1.setForeground(new Color(255, 255, 255));
+		rdbtnNewRadioButton_1.setBackground(new Color(102, 51, 102));
+		rdbtnNewRadioButton_1.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("12,5 quilos");
+		rdbtnNewRadioButton_2.setForeground(new Color(255, 255, 255));
+		rdbtnNewRadioButton_2.setBackground(new Color(102, 51, 102));
+		rdbtnNewRadioButton_2.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("15,5 quilos");
+		rdbtnNewRadioButton_3.setForeground(new Color(255, 255, 255));
+		rdbtnNewRadioButton_3.setBackground(new Color(102, 51, 102));
+		rdbtnNewRadioButton_3.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		ButtonGroup bg = new ButtonGroup();
 		bg.add(rdbtnNewRadioButton);
 		bg.add(rdbtnNewRadioButton_1);
@@ -84,6 +103,7 @@ public class Pergunta6 extends JFrame {
 		bg.add(rdbtnNewRadioButton_3);
 		
 		JButton btnNewButton = new JButton("Confirmar");
+		btnNewButton.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnNewRadioButton.isSelected()){

@@ -16,6 +16,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
 
 public class pergunta11 extends JFrame {
 
@@ -44,12 +46,16 @@ public class pergunta11 extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 690, 364);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(102, 51, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		JLabel lblSeDurante = new JLabel("11. Se durante uma corrida de carros, voc\u00EA deixa o segundo colocado pra tr\u00E1s, qual \u00E9 a sua coloca\u00E7\u00E3o ap\u00F3s a ultrapassagem?");
+		lblSeDurante.setForeground(new Color(255, 255, 255));
+		lblSeDurante.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(102, 51, 102));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -74,14 +80,29 @@ public class pergunta11 extends JFrame {
 		);
 		
 		JRadioButton rdbtnPrimeiro = new JRadioButton("Primeiro");
+		rdbtnPrimeiro.setForeground(new Color(255, 255, 255));
+		rdbtnPrimeiro.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		rdbtnPrimeiro.setBackground(new Color(102, 51, 102));
 		
 		JRadioButton rdbtnQuarto = new JRadioButton("Quarto");
+		rdbtnQuarto.setForeground(new Color(255, 255, 255));
+		rdbtnQuarto.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		rdbtnQuarto.setBackground(new Color(102, 51, 102));
 		
 		JRadioButton rdbtnTerceiro = new JRadioButton("Terceiro");
+		rdbtnTerceiro.setForeground(new Color(255, 255, 255));
+		rdbtnTerceiro.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		rdbtnTerceiro.setBackground(new Color(102, 51, 102));
 		
 		JRadioButton rdbtnQuinto = new JRadioButton("Quinto");
+		rdbtnQuinto.setForeground(new Color(255, 255, 255));
+		rdbtnQuinto.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		rdbtnQuinto.setBackground(new Color(102, 51, 102));
 		
 		JRadioButton rdbtnSegundo = new JRadioButton("Segundo");
+		rdbtnSegundo.setForeground(new Color(255, 255, 255));
+		rdbtnSegundo.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		rdbtnSegundo.setBackground(new Color(102, 51, 102));
 		ButtonGroup bg = new ButtonGroup();
 		bg.add(rdbtnPrimeiro);
 		bg.add(rdbtnQuarto);
@@ -90,6 +111,7 @@ public class pergunta11 extends JFrame {
 		bg.add(rdbtnSegundo);
 		
 		JButton btnNewButton = new JButton("Confirmar");
+		btnNewButton.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnSegundo.isSelected()){

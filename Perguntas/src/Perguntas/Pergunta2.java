@@ -16,6 +16,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
 
 public class Pergunta2 extends JFrame {
 
@@ -44,12 +46,17 @@ public class Pergunta2 extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(102, 51, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		JLabel lblNewLabel = new JLabel("2.O pai do padre \u00E9 filho do meu pai. O que eu sou do Padre?");
+		lblNewLabel.setBackground(new Color(102, 51, 102));
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(102, 51, 102));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -74,12 +81,24 @@ public class Pergunta2 extends JFrame {
 		);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Judeu");
+		rdbtnNewRadioButton.setBackground(new Color(102, 51, 102));
+		rdbtnNewRadioButton.setForeground(new Color(255, 255, 255));
+		rdbtnNewRadioButton.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Sobrinho");
+		rdbtnNewRadioButton_1.setBackground(new Color(102, 51, 102));
+		rdbtnNewRadioButton_1.setForeground(new Color(255, 255, 255));
+		rdbtnNewRadioButton_1.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Pai");
+		rdbtnNewRadioButton_2.setBackground(new Color(102, 51, 102));
+		rdbtnNewRadioButton_2.setForeground(new Color(255, 255, 255));
+		rdbtnNewRadioButton_2.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("Tio");
+		rdbtnNewRadioButton_3.setBackground(new Color(102, 51, 102));
+		rdbtnNewRadioButton_3.setForeground(new Color(255, 255, 255));
+		rdbtnNewRadioButton_3.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		ButtonGroup bg = new ButtonGroup();
 		bg.add(rdbtnNewRadioButton);
 		bg.add(rdbtnNewRadioButton_1);
@@ -88,6 +107,7 @@ public class Pergunta2 extends JFrame {
 		
 		
 		JButton btnNewButton = new JButton("Comfirmar");
+		btnNewButton.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnNewRadioButton_3.isSelected()){

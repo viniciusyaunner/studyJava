@@ -16,6 +16,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
 
 public class Pergunta10 extends JFrame {
 
@@ -44,16 +46,24 @@ public class Pergunta10 extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 574, 364);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(102, 51, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(102, 51, 102));
 		
 		JLabel lblSeqnciaDePalavras = new JLabel("10- seq\u00FC\u00EAncia de palavras abaixo segue uma determinada regra:");
+		lblSeqnciaDePalavras.setForeground(new Color(255, 255, 255));
+		lblSeqnciaDePalavras.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JLabel lblCamisetaAcetonaMacaco = new JLabel("Camiseta, acetona, macaco, abacaxi, m\u00E1gico");
+		lblCamisetaAcetonaMacaco.setForeground(new Color(255, 255, 255));
+		lblCamisetaAcetonaMacaco.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JLabel lblQualA = new JLabel("Qual \u00E9 a pr\u00F3xima palavra da seq\u00FC\u00EAncia?");
+		lblQualA.setForeground(new Color(255, 255, 255));
+		lblQualA.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -85,18 +95,33 @@ public class Pergunta10 extends JFrame {
 					.addComponent(lblQualA)
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 237, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+					.addContainerGap(13, Short.MAX_VALUE))
 		);
 		
 		JRadioButton rdbtnCavalo = new JRadioButton("Cavalo");
+		rdbtnCavalo.setBackground(new Color(102, 51, 102));
+		rdbtnCavalo.setForeground(new Color(255, 255, 255));
+		rdbtnCavalo.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JRadioButton rdbtnAzeite = new JRadioButton("azeite");
+		rdbtnAzeite.setBackground(new Color(102, 51, 102));
+		rdbtnAzeite.setForeground(new Color(255, 255, 255));
+		rdbtnAzeite.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JRadioButton rdbtnMaionese = new JRadioButton("maionese");
+		rdbtnMaionese.setBackground(new Color(102, 51, 102));
+		rdbtnMaionese.setForeground(new Color(255, 255, 255));
+		rdbtnMaionese.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JRadioButton rdbtnBasquete = new JRadioButton("basquete");
+		rdbtnBasquete.setBackground(new Color(102, 51, 102));
+		rdbtnBasquete.setForeground(new Color(255, 255, 255));
+		rdbtnBasquete.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		
 		JRadioButton rdbtnPublicao = new JRadioButton("publica\u00E7\u00E3o");
+		rdbtnPublicao.setBackground(new Color(102, 51, 102));
+		rdbtnPublicao.setForeground(new Color(255, 255, 255));
+		rdbtnPublicao.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		ButtonGroup bg = new ButtonGroup();
 		bg.add(rdbtnCavalo);
 		bg.add(rdbtnAzeite);
@@ -105,6 +130,8 @@ public class Pergunta10 extends JFrame {
 		bg.add(rdbtnPublicao);
 		
 		JButton btnConfirmar = new JButton("Confirmar");
+		btnConfirmar.setForeground(new Color(0, 0, 0));
+		btnConfirmar.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		btnConfirmar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnCavalo.isSelected()){
@@ -121,34 +148,36 @@ public class Pergunta10 extends JFrame {
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
-					.addGap(16)
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-						.addComponent(rdbtnPublicao)
-						.addComponent(rdbtnBasquete)
 						.addGroup(gl_panel.createSequentialGroup()
-							.addComponent(rdbtnMaionese)
-							.addPreferredGap(ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-							.addComponent(btnConfirmar))
-						.addComponent(rdbtnAzeite)
-						.addComponent(rdbtnCavalo))
-					.addContainerGap())
+							.addGap(16)
+							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+								.addComponent(rdbtnMaionese)
+								.addComponent(rdbtnAzeite)
+								.addComponent(rdbtnCavalo)
+								.addComponent(rdbtnPublicao)
+								.addComponent(rdbtnBasquete)))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addGap(56)
+							.addComponent(btnConfirmar)))
+					.addContainerGap(69, Short.MAX_VALUE))
 		);
 		gl_panel.setVerticalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
 					.addGap(16)
 					.addComponent(rdbtnCavalo)
-					.addGap(18)
+					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(rdbtnAzeite)
-					.addGap(18)
-					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
-						.addComponent(rdbtnMaionese)
-						.addComponent(btnConfirmar))
-					.addGap(18)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(rdbtnMaionese)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(rdbtnBasquete)
-					.addPreferredGap(ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(rdbtnPublicao)
-					.addGap(21))
+					.addPreferredGap(ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+					.addComponent(btnConfirmar)
+					.addGap(23))
 		);
 		panel.setLayout(gl_panel);
 		contentPane.setLayout(gl_contentPane);

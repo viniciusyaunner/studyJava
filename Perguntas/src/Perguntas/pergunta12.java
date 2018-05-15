@@ -16,6 +16,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
 
 public class pergunta12 extends JFrame {
 
@@ -44,14 +46,20 @@ public class pergunta12 extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 633, 392);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(102, 51, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		JLabel lblNoCaminhoDe = new JLabel("12.No caminho de casa at\u00E9 o mercado, uma senhora conta 10 \u00E1rvores a sua direita. Ap\u00F3s as compras, ");
+		lblNoCaminhoDe.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		lblNoCaminhoDe.setForeground(new Color(255, 255, 255));
 		
 		JLabel lblElaVoltaPara = new JLabel("ela volta para casa e conta 10 \u00E1rvores a sua esquerda. Quantas \u00E1rvores ela viu no total nesse dia?");
+		lblElaVoltaPara.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		lblElaVoltaPara.setForeground(new Color(255, 255, 255));
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(102, 51, 102));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -80,14 +88,29 @@ public class pergunta12 extends JFrame {
 		);
 		
 		JRadioButton radioButton = new JRadioButton("10");
+		radioButton.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		radioButton.setForeground(new Color(255, 255, 255));
+		radioButton.setBackground(new Color(102, 51, 102));
 		
 		JRadioButton radioButton_1 = new JRadioButton("20");
+		radioButton_1.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		radioButton_1.setForeground(new Color(255, 255, 255));
+		radioButton_1.setBackground(new Color(102, 51, 102));
 		
 		JRadioButton radioButton_2 = new JRadioButton("15");
+		radioButton_2.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		radioButton_2.setForeground(new Color(255, 255, 255));
+		radioButton_2.setBackground(new Color(102, 51, 102));
 		
 		JRadioButton radioButton_3 = new JRadioButton("25");
+		radioButton_3.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		radioButton_3.setForeground(new Color(255, 255, 255));
+		radioButton_3.setBackground(new Color(102, 51, 102));
 		
 		JRadioButton radioButton_4 = new JRadioButton("30");
+		radioButton_4.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
+		radioButton_4.setForeground(new Color(255, 255, 255));
+		radioButton_4.setBackground(new Color(102, 51, 102));
 		ButtonGroup bg = new ButtonGroup();
 		bg.add(radioButton);
 		bg.add(radioButton_1);
@@ -96,6 +119,7 @@ public class pergunta12 extends JFrame {
 		bg.add(radioButton_4);
 		
 		JButton btnConfirmar = new JButton("Confirmar");
+		btnConfirmar.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		btnConfirmar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(radioButton.isSelected()){
