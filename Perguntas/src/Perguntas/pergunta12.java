@@ -44,7 +44,7 @@ public class pergunta12 extends JFrame {
 	 */
 	public pergunta12() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 633, 392);
+		setBounds(100, 100, 768, 392);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(102, 51, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -71,9 +71,9 @@ public class pergunta12 extends JFrame {
 								.addComponent(lblElaVoltaPara)
 								.addComponent(lblNoCaminhoDe)))
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(192)
+							.addGap(284)
 							.addComponent(panel, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(81, Short.MAX_VALUE))
+					.addContainerGap(24, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -82,9 +82,9 @@ public class pergunta12 extends JFrame {
 					.addComponent(lblNoCaminhoDe)
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(lblElaVoltaPara)
-					.addGap(50)
+					.addPreferredGap(ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
 					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 211, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(37, Short.MAX_VALUE))
+					.addGap(42))
 		);
 		
 		JRadioButton radioButton = new JRadioButton("10");
@@ -121,11 +121,15 @@ public class pergunta12 extends JFrame {
 		JButton btnConfirmar = new JButton("Confirmar");
 		btnConfirmar.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		btnConfirmar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e, Object getCerto) {
 				if(radioButton.isSelected()){
-					JOptionPane.showMessageDialog(null,"Acertou!!");
+					JOptionPane.showMessageDialog(null,"Acertou!!,numero de acertos e erros:",getCerto);
+					int pontoc = Pontos.getCerto()+1;
+					Pontos.setCerto(pontoc);
 				}else{
 					JOptionPane.showMessageDialog(null, "Errou!!");
+					int pontoe = Pontos.getErrado()+1;
+					Pontos.setErrado(pontoe);
 				}
 				
 			}

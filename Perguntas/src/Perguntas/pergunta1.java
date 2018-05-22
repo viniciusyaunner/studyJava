@@ -89,8 +89,12 @@ public class pergunta1 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnNenhumaDasDuas.isSelected()){
 					JOptionPane.showMessageDialog(null,"Acertou!!");
+					int pontoc = Pontos.getCerto()+1;
+					Pontos.setCerto(pontoc);
 				}else{
 					JOptionPane.showMessageDialog(null, "Errou!!");
+					int pontoe = Pontos.getErrado()+1;
+					Pontos.setErrado(pontoe);
 				}
 				Pergunta2 p2 = new Pergunta2();
 				p2.setVisible(true);

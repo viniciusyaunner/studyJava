@@ -65,18 +65,18 @@ public class pergunta11 extends JFrame {
 							.addGap(34)
 							.addComponent(lblSeDurante))
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(164)
+							.addGap(159)
 							.addComponent(panel, GroupLayout.PREFERRED_SIZE, 216, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(37, Short.MAX_VALUE))
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
 					.addComponent(lblSeDurante)
-					.addGap(46)
+					.addPreferredGap(ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
 					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 221, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(23, Short.MAX_VALUE))
+					.addGap(19))
 		);
 		
 		JRadioButton rdbtnPrimeiro = new JRadioButton("Primeiro");
@@ -116,8 +116,12 @@ public class pergunta11 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnSegundo.isSelected()){
 					JOptionPane.showMessageDialog(null,"Acertou!!");
+					int pontoc = Pontos.getCerto()+1;
+					Pontos.setCerto(pontoc);
 				}else{
 					JOptionPane.showMessageDialog(null, "Errou!!");
+					int pontoe = Pontos.getErrado()+1;
+					Pontos.setErrado(pontoe);
 				}
 				pergunta12 p12 = new pergunta12();
 				p12.setVisible(true);

@@ -136,8 +136,12 @@ public class Pergunta10 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnCavalo.isSelected()){
 					JOptionPane.showMessageDialog(null,"Acertou!!");
+					int pontoc = Pontos.getCerto()+1;
+					Pontos.setCerto(pontoc);
 				}else{
 					JOptionPane.showMessageDialog(null, "Errou!!");
+					int pontoe = Pontos.getErrado()+1;
+					Pontos.setErrado(pontoe);
 				}
 				pergunta11 p11 = new pergunta11();
 				p11.setVisible(true);

@@ -107,9 +107,12 @@ public class Pergunta6 extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnNewRadioButton.isSelected()){
-					JOptionPane.showMessageDialog(null,"Acertou!!");
+					JOptionPane.showMessageDialog(null,"Acertou!!");int pontoc = Pontos.getCerto()+1;
+					Pontos.setCerto(pontoc);
 				}else{
 					JOptionPane.showMessageDialog(null, "Errou!!");
+					int pontoe = Pontos.getErrado()+1;
+					Pontos.setErrado(pontoe);
 				}
 				Pergunta7 p7 = new Pergunta7();
 				p7.setVisible(true);
