@@ -121,9 +121,9 @@ public class pergunta12 extends JFrame {
 		JButton btnConfirmar = new JButton("Confirmar");
 		btnConfirmar.setFont(new Font("OCR A Extended", Font.PLAIN, 11));
 		btnConfirmar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e, Object getCerto) {
+			public void actionPerformed(ActionEvent e) {
 				if(radioButton.isSelected()){
-					JOptionPane.showMessageDialog(null,"Acertou!!,numero de acertos e erros:",getCerto);
+					JOptionPane.showMessageDialog(null,"Acertou!!");
 					int pontoc = Pontos.getCerto()+1;
 					Pontos.setCerto(pontoc);
 				}else{
@@ -131,8 +131,11 @@ public class pergunta12 extends JFrame {
 					int pontoe = Pontos.getErrado()+1;
 					Pontos.setErrado(pontoe);
 				}
-				
+				ponti Pon = new ponti();
+				Pon.setVisible(true);
+				dispose();
 			}
+
 		});
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
