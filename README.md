@@ -1,3 +1,3 @@
 # studyJava
 
-## This is my activities using Java. 
+## These are my activities where I used Java. 
