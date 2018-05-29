@@ -44,7 +44,7 @@ public class pergunta11 extends JFrame {
 	 */
 	public pergunta11() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 690, 364);
+		setBounds(100, 100, 934, 364);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(102, 51, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

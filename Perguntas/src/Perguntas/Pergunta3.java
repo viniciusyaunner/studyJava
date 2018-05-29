@@ -44,7 +44,7 @@ public class Pergunta3 extends JFrame {
 	 */
 	public Pergunta3() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 594, 345);
 		contentPane = new JPanel();
 		contentPane.setForeground(new Color(255, 255, 255));
 		contentPane.setBackground(new Color(102, 51, 102));
@@ -70,15 +70,15 @@ public class Pergunta3 extends JFrame {
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(156)
 							.addComponent(panel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(14, Short.MAX_VALUE))
+					.addContainerGap(99, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addComponent(lblEmUmAno)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-					.addGap(23))
+					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 178, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(99, Short.MAX_VALUE))
 		);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("3");
@@ -126,19 +126,20 @@ public class Pergunta3 extends JFrame {
 		});
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
-			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_panel.createSequentialGroup()
-					.addContainerGap(30, Short.MAX_VALUE)
-					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-						.addComponent(rdbtnNewRadioButton_3)
-						.addComponent(rdbtnNewRadioButton_2)
-						.addComponent(rdbtnNewRadioButton_1)
-						.addComponent(rdbtnNewRadioButton))
-					.addGap(18))
+			gl_panel.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_panel.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(btnConfirmar)
-					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel.createSequentialGroup()
+							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+								.addComponent(rdbtnNewRadioButton_3)
+								.addComponent(rdbtnNewRadioButton_2)
+								.addComponent(rdbtnNewRadioButton_1)
+								.addComponent(rdbtnNewRadioButton))
+							.addGap(18))
+						.addGroup(Alignment.TRAILING, gl_panel.createSequentialGroup()
+							.addComponent(btnConfirmar)
+							.addContainerGap())))
 		);
 		gl_panel.setVerticalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
@@ -151,9 +152,9 @@ public class Pergunta3 extends JFrame {
 					.addComponent(rdbtnNewRadioButton_2)
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(rdbtnNewRadioButton_3)
-					.addPreferredGap(ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+					.addGap(18)
 					.addComponent(btnConfirmar)
-					.addGap(31))
+					.addContainerGap(105, Short.MAX_VALUE))
 		);
 		panel.setLayout(gl_panel);
 		contentPane.setLayout(gl_contentPane);

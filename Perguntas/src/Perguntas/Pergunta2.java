@@ -63,12 +63,10 @@ public class Pergunta2 extends JFrame {
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(68)
-							.addComponent(lblNewLabel))
-						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(111)
-							.addComponent(panel, GroupLayout.PREFERRED_SIZE, 186, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(76, Short.MAX_VALUE))
+							.addComponent(panel, GroupLayout.PREFERRED_SIZE, 186, GroupLayout.PREFERRED_SIZE))
+						.addComponent(lblNewLabel))
+					.addContainerGap(68, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -76,7 +74,7 @@ public class Pergunta2 extends JFrame {
 					.addContainerGap()
 					.addComponent(lblNewLabel)
 					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
 					.addContainerGap())
 		);
 		

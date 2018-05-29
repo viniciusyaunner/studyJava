@@ -45,7 +45,7 @@ public class Pergunta6 extends JFrame {
 	 */
 	public Pergunta6() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 831, 416);
+		setBounds(100, 100, 1145, 447);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(102, 51, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

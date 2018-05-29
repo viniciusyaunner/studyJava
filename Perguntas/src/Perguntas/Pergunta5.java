@@ -59,23 +59,23 @@ public class Pergunta5 extends JFrame {
 		panel.setBackground(new Color(102, 51, 102));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
+			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(73)
-					.addComponent(lblNewLabel)
-					.addContainerGap(92, Short.MAX_VALUE))
-				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-					.addContainerGap(150, Short.MAX_VALUE)
+					.addContainerGap(159, Short.MAX_VALUE)
 					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 154, GroupLayout.PREFERRED_SIZE)
 					.addGap(120))
+				.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
+					.addGap(25)
+					.addComponent(lblNewLabel)
+					.addContainerGap(49, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(21)
+					.addGap(14)
 					.addComponent(lblNewLabel)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+					.addGap(18)
+					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
 					.addContainerGap())
 		);
 		
