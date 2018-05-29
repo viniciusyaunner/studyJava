@@ -44,7 +44,7 @@ public class pergunta1 extends JFrame {
 	 */
 	public pergunta1() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 657, 404);
+		setBounds(100, 100, 897, 404);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(102, 51, 102));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -103,24 +103,24 @@ public class pergunta1 extends JFrame {
 		});
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
-			gl_panel.createParallelGroup(Alignment.LEADING)
+			gl_panel.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_panel.createSequentialGroup()
-					.addGap(51)
+					.addContainerGap(70, Short.MAX_VALUE)
+					.addComponent(btnConfirmar)
+					.addGap(71))
+				.addGroup(Alignment.LEADING, gl_panel.createSequentialGroup()
+					.addGap(25)
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 						.addComponent(rdbtnNenhumaDasDuas)
 						.addComponent(rdbtnPata)
 						.addComponent(rdbtnChile)
 						.addComponent(rdbtnNewRadioButton))
-					.addContainerGap(39, Short.MAX_VALUE))
-				.addGroup(Alignment.TRAILING, gl_panel.createSequentialGroup()
-					.addContainerGap(83, Short.MAX_VALUE)
-					.addComponent(btnConfirmar)
-					.addGap(71))
+					.addContainerGap(29, Short.MAX_VALUE))
 		);
 		gl_panel.setVerticalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel.createSequentialGroup()
-					.addGap(50)
+				.addGroup(Alignment.TRAILING, gl_panel.createSequentialGroup()
+					.addContainerGap(49, Short.MAX_VALUE)
 					.addComponent(rdbtnNewRadioButton)
 					.addGap(29)
 					.addComponent(rdbtnChile)
@@ -128,7 +128,7 @@ public class pergunta1 extends JFrame {
 					.addComponent(rdbtnPata)
 					.addGap(18)
 					.addComponent(rdbtnNenhumaDasDuas)
-					.addPreferredGap(ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+					.addGap(31)
 					.addComponent(btnConfirmar)
 					.addGap(24))
 		);
@@ -140,11 +140,11 @@ public class pergunta1 extends JFrame {
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addContainerGap()
-							.addComponent(lblUmaPataNascida, GroupLayout.PREFERRED_SIZE, 541, GroupLayout.PREFERRED_SIZE))
+							.addComponent(lblUmaPataNascida))
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(145)
+							.addGap(275)
 							.addComponent(panel, GroupLayout.PREFERRED_SIZE, 233, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(80, Short.MAX_VALUE))
+					.addContainerGap(5, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -152,7 +152,7 @@ public class pergunta1 extends JFrame {
 					.addComponent(lblUmaPataNascida, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addComponent(panel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addGap(31))
+					.addGap(41))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}

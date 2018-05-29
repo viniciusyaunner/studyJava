@@ -110,7 +110,7 @@ public class Pergunta7 extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			
 			
-				if(rdbtnNewRadioButton.isSelected()){
+				if(rdbtnNewRadioButton_2.isSelected()){
 					JOptionPane.showMessageDialog(null,"Acertou!!");
 					int pontoc = Pontos.getCerto()+1;
 					Pontos.setCerto(pontoc);
