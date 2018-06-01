@@ -1,3 +1,3 @@
 # studyJava
 
-## These are my activities where I used Java. 
+## These are the activities where I and a colleague named Marcus used Java. 
