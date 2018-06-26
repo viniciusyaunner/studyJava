@@ -1,5 +1,5 @@
-﻿create database pGasolina;
-use pGasolina;
+﻿create database postoGas;
+use postoGas;
 
 create table combustivel(
 codcomb int not null,
