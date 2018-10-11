@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaController">
+   <children>
+      <Pane layoutX="40.0" layoutY="34.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField id="txtNome" fx:id="txtNome" layoutX="207.0" layoutY="86.0" />
+            <TextField id="txtEmail" fx:id="txtEmail" layoutX="207.0" layoutY="154.0" />
+            <Button id="btnOk" fx:id="btnOk" layoutX="255.0" layoutY="244.0" mnemonicParsing="false" text="OK" />
+         </children>
+      </Pane>
+   </children>
+</fx:root>
