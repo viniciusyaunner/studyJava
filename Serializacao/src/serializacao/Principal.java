@@ -16,11 +16,11 @@ public class Principal {
 		listaTenis.add(new Tenis(38, "Mizuno", "Wave"));
 		listaTenis.add(new Tenis(44, "Nike", "Air"));
 		listaTenis.add(new Tenis(42,"Adidas", "Advantage"));
-		serializaListaTenis(listaTenis, "TenisSerializados.dat");
-		ArrayList<Tenis> listaRecuperada = deserializaListaTenis("TenisSerializados.dat");
-		for(Tenis t : listaRecuperada){
-			System.out.println(t);
-		}
+	//	serializaListaTenis(listaTenis, "TenisSerializados.dat");
+	//	ArrayList<Tenis> listaRecuperada = deserializaListaTenis("TenisSerializados.dat");
+	//	for(Tenis t : listaRecuperada){
+		//	System.out.println(t);
+	//	}
 		
 		ArrayList<livros> listaLivros = new ArrayList<livros>();
 		listaLivros.add(new livros(38, "The Call of Cthulhu", "H. P. Lovecraft"));
@@ -76,47 +76,6 @@ public class Principal {
 		}
 	}
 	
-	private static ArrayList<Tenis> deserializaListaTenis(String arquivo){
-		FileInputStream arqLeitura = null;
-		ObjectInputStream in = null;
-		ArrayList<Tenis> lista = null;
-		try{
-			arqLeitura = new FileInputStream(arquivo);
-			in = new ObjectInputStream(arqLeitura);
-			lista = (ArrayList<Tenis>) in.readObject();
-		}catch(ClassNotFoundException ex){
-			ex.printStackTrace();
-		}catch(IOException ex){
-			ex.printStackTrace();
-		}finally {
-			try{
-				arqLeitura.close();
-				in.close();
-			}catch(IOException ex){
-				ex.printStackTrace();
-			}
-		}
-		return lista;
-	}
 	
-	private static void serializaListaTenis(ArrayList<Tenis> listaTenis, String arquivo){
-		FileOutputStream arq = null;
-		ObjectOutputStream out = null;
-		
-		try{
-			arq = new FileOutputStream(arquivo); 
-			out = new ObjectOutputStream(arq);
-			out.writeObject(listaTenis);
-		}catch(IOException ex){
-			ex.printStackTrace();
-		}finally{
-			try{
-				arq.close();
-				out.close();
-			}catch(IOException ex){
-				ex.printStackTrace();
-			}
-		}
-	}
 	
 }

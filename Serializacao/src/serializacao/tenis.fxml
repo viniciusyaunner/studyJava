@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="384.0" prefWidth="389.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="serializacao.Tenis">
+   <children>
+      <TableView layoutX="77.0" layoutY="37.0" prefHeight="200.0" prefWidth="236.0">
+        <columns>
+          <TableColumn fx:id="colunaNumero" prefWidth="75.0" text="Numero" />
+          <TableColumn fx:id="colunaMarca" prefWidth="75.0" text="Marca" />
+            <TableColumn fx:id="colunaModelo" prefWidth="75.0" text="Modelo" />
+        </columns>
+      </TableView>
+      <TextField fx:id="marca" layoutX="28.0" layoutY="252.0" prefHeight="31.0" prefWidth="98.0" promptText="Marca" />
+      <TextField fx:id="numero" layoutX="146.0" layoutY="252.0" prefHeight="31.0" prefWidth="98.0" promptText="Numero" />
+      <TextField fx:id="modelo" layoutX="264.0" layoutY="252.0" prefHeight="31.0" prefWidth="98.0" promptText="Modelo" />
+      <Button fx:id="remover" layoutX="119.0" layoutY="295.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="37.0" text="-" />
+      <Button fx:id="adcionar" layoutX="40.0" layoutY="295.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="37.0" text="+" />
+      <Button fx:id="serializar" layoutX="216.0" layoutY="295.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="48.0" text="Salvar" />
+      <Button fx:id="deserializar" layoutX="292.0" layoutY="295.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="70.0" text="Carregar" />
+   </children>
+</fx:root>
