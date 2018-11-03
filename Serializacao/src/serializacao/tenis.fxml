@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="384.0" prefWidth="389.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="serializacao.Tenis">
+<fx:root prefHeight="384.0" prefWidth="389.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="serializacao.TenisCTR">
    <children>
       <TableView layoutX="77.0" layoutY="37.0" prefHeight="200.0" prefWidth="236.0">
         <columns>
